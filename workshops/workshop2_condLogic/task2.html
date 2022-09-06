@@ -45,19 +45,19 @@
 
     <script>
         //Oppgave 1: Spillernavn
-        const playerName = "Hiof"
+        const playerName = "Diego"
         document.getElementById("playername").innerHTML = playerName
         //Oppgave 2: Penger
-        let coins = 15
+        let coins = 0
         document.getElementById("coins-count").innerHTML = coins
         //Oppgave 3: Liv
-        let lives = 5
+        let lives = 1
         document.getElementById("lives-count").innerHTML = lives
         //Oppgave 4: Våpen-nivåer:
-        let longsword = 1
-        let warhammer = 4
-        let battleaxe = 2
-        let armour = 3
+        let longsword = 1347
+        let warhammer = 1685
+        let battleaxe = 587
+        let armour = 50
         document.getElementById("weapon-longsword").innerHTML = longsword
         document.getElementById("weapon-warhammer").innerHTML = warhammer
         document.getElementById("weapon-battleaxe").innerHTML = battleaxe
@@ -68,6 +68,51 @@
         //Oppgave 6: Utskrift av level
         let level = 1
         document.getElementById("level-count").innerHTML = level
+
+        //Workshop 2. Oppgave 1 Sjekk av coins. 
+        if(coins == 0) {
+            document.getElementById("coins-count").innerHTML = "Collect some coins!"
+        } else {
+            document.getElementById("coins-count").innerHTML = coins
+        }
+
+        // Oppgave 2 Våpner i armory nivå 10 eller høyere. Hvis 10 gull markert.
+        //longswoard
+        if(longsword >= 10) {
+            document.getElementById("weapon-longsword").style.color = "yellow";
+        } else {
+            document.getElementById("weapon-longsword").innerHTML = longswoard
+        }
+
+        //warhammer
+        if(warhammer >= 10) {
+            document.getElementById("weapon-warhammer").style.color = "yellow";
+        } else {
+            document.getElementById("weapon-warhammer").innerHTML = warhammer
+        }
+
+        //battleaxe
+        if(battleaxe >=10) {
+            document.getElementById("weapon-battleaxe").style.color = "yellow";
+        } else {
+            document.getElementById("weapon-battleaxe").innerHTML = battleaxe
+        }
+
+        //armour
+        if(armour >= 10) {
+            document.getElementById("weapon-armour").style.color = "yellow"; 
+        } else {
+            document.getElementById("weapon-armour").innerHTML = armour
+        }
+
+        //oppgave 3 liv sjekk. Dersom 1 liv igjen skrives det i rød farge.
+        if(lives <= 1) {
+            document.getElementById("lives-count").style.color = "red";
+        } else {
+            document.getElementById("lives-count").innerHTML = lives
+        }
+
+        //oppgave 4 sjekk av våpner i armory nivå 0. Hvis 0 skal den skrives ut.  
     </script>
 </body>
 </html>
